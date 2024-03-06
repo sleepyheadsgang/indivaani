@@ -5,3 +5,20 @@
   --text-primary: var(--primary);
   --text-secondary: var(--secondary)
 }
+
+.root.dark {
+  --primary: #D8A850;
+  --secondary: #761B15;
+  --text-default: #000;
+  --text-primary: var(--primary);
+  --text-secondary: var(--secondary)
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --primary: #D8A850;
+    --secondary: #761B15;
+    --text-default: #000;
+    --text-primary: var(--primary);
+    --text-secondary: var(--secondary)
+  }
+}
