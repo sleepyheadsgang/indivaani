@@ -14,6 +14,7 @@ export default {
         DEFAULT: 'var(--text-default)',
         primary: 'var(--text-primary)',
         secondary: 'var(--text-secondary)',
+        alt: 'var(--text-alt)',
       }
     },
   },
