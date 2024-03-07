@@ -1,9 +1,8 @@
-import { XMarkIcon, Bars3Icon, MicrophoneIcon } from '@heroicons/react/24/outline'
+import { XMarkIcon, Bars3Icon, } from '@heroicons/react/24/outline'
 import { Dialog } from "@headlessui/react"
 import { useState } from "react";
 import Link from 'src/components/atoms/Link';
 import LanguageTextField from 'src/components/molecules/LanguageTextField';
-import language from '@api/language';
 import AudioSection from 'src/components/molecules/AudioSection';
 
 const navigation = [
@@ -16,7 +15,7 @@ const Home = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   return (
     <>
-      <div className="bg-white">
+      <div className="bg-white pb-24">
         <header className="absolute inset-x-0 top-0 z-50">
           <nav className="flex items-center justify-between p-6 lg:px-8" aria-label="Global">
             <div className="flex lg:flex-1">
@@ -54,8 +53,8 @@ const Home = () => {
                 <Link to="#" className="-m-1.5 p-1.5">
                   <span className="sr-only">IndiVaani</span>
                   <img
-                    className="h-8 w-auto"
-                    src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
+                    className="h-14 w-auto rounded-full"
+                    src="/indivaani-logo.jpg"
                     alt=""
                   />
                 </Link>

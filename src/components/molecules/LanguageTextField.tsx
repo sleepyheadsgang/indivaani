@@ -11,7 +11,9 @@ const LanguageTextField: FC = () => {
   const [selectedLanguage, setSelectedLanguage] = useState('hindi');
   const [listOfLanguages, setListOfLanguages] = useState([]);
   const [translationResult, setTranslationResult] = useState('');
-  const [text, setText] = useState('')
+  const [text, setText] = useState('');
+  const [loading, setLoading] = useState(false)
+
 
   useEffect(() => {
     language().then((result) => {
@@ -33,10 +35,16 @@ const LanguageTextField: FC = () => {
 
   const onSubmit = async (e) => {
     e.preventDefault();
+    setLoading(true);
+    try {
+      const result = await translate(text, selectedLanguage, 'random id')
+      setTranslationResult(result)
+    } catch (error) {
+      toast('An error occurred!', { type: 'error' })
+    } finally {
+      setLoading(false)
+    }
 
-    const result = await translate(text, selectedLanguage, 'random id')
-
-    setTranslationResult(result)
   }
 
   return (

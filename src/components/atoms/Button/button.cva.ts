@@ -1,6 +1,6 @@
 import { cva } from "class-variance-authority";
 
-const button = cva('', {
+const button = cva('disabled:opacity-60', {
   variants: {
     variant: {
       "primary": ["bg-primary text-alt"]
