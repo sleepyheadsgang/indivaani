@@ -12,7 +12,7 @@ const button = cva('', {
     },
     roundness: {
       'full': ['rounded-full'],
-      'pill': ['px-4 py-2 rounded-md']
+      'pill': ['px-4 py-2 rounded-full']
     }
   }
 });

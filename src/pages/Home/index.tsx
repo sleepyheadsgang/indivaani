@@ -1,8 +1,10 @@
-import { XMarkIcon, Bars3Icon, ArrowsUpDownIcon } from '@heroicons/react/24/outline'
+import { XMarkIcon, Bars3Icon, MicrophoneIcon } from '@heroicons/react/24/outline'
 import { Dialog } from "@headlessui/react"
 import { useState } from "react";
 import Link from 'src/components/atoms/Link';
 import LanguageTextField from 'src/components/molecules/LanguageTextField';
+import language from '@api/language';
+import AudioSection from 'src/components/molecules/AudioSection';
 
 const navigation = [
   { name: 'Translate', href: '#' },
@@ -85,7 +87,7 @@ const Home = () => {
           </Dialog>
         </header>
 
-        <div className="relative isolate px-6 pt-14 lg:px-8">
+        <section className="relative isolate px-6 pt-14 lg:px-8">
           <div
             className="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80"
             aria-hidden="true"
@@ -109,18 +111,16 @@ const Home = () => {
             </div>
             <div className="text-center">
               <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
-                Easily convert 11+ regional languages
+                Easily convert 100+ regional languages
               </h1>
               <p className="mt-6 text-lg leading-8 text-gray-600">
-                Hindi, Bengali, Gujarati, Punjabi, Malayalam, Kannada, Tamil, Telugu, Oriya, Marathi, Assamese, Konkani, Bodo, Nepali, Urdu, English
+                Hindi, Bengali, Gujarati, Punjabi, Malayalam, Kannada, Tamil, Telugu, Oriya, Marathi, Assamese, Konkani, Bodo, Nepali, Urdu, English, and many more...
               </p>
             </div>
-            <div className='flex justify-center gap-8 mt-10'>
-              <LanguageTextField type='prompt' />
-              <LanguageTextField type='result' />
-            </div>
+            <LanguageTextField />
           </div>
-        </div>
+        </section>
+        <AudioSection />
       </div>
     </>
   )

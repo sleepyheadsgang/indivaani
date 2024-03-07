@@ -1,15 +1,12 @@
 import { FC, TextareaHTMLAttributes } from "react"
-import textarea from "./textarea.cva"
-import { VariantProps, cx } from "class-variance-authority"
 
-
-type TextareaProps = TextareaHTMLAttributes<HTMLTextAreaElement> & VariantProps<typeof textarea> & {
+type TextareaProps = TextareaHTMLAttributes<HTMLTextAreaElement> & {
 
 }
-const TextField: FC<TextareaProps> = ({ className, ...props }) => {
+const TextField: FC<TextareaProps> = ({ ...props }) => {
   return (
     <>
-      <textarea className={cx(textarea(), className)} {...props} />
+      <textarea {...props} />
     </>
   )
 }

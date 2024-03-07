@@ -1,6 +1,6 @@
 import {cva} from 'class-variance-authority'
 
-const textarea = cva('p-4 input focus:border-primary transition-colors border-2 resize-none outline-none rounded-md font-[inherit]', {
+const textarea = cva('p-4 input outline-none resize-none', {
   variants: {
     
   }
